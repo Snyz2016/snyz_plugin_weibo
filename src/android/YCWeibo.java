@@ -322,6 +322,7 @@ public class YCWeibo extends CordovaPlugin {
 
         @Override
         public void onComplete(Bundle values) {
+			
             mAccessToken = Oauth2AccessToken.parseAccessToken(values);
             if (mAccessToken.isSessionValid()) {
                 AccessTokenKeeper.writeAccessToken(
